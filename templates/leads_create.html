@@ -1,0 +1,42 @@
+<form method="post" action="{% url 'crud:leads_create' %}" class="js-book-create-form">
+    {% csrf_token %}
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Create a new leads</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    
+    <div class="modal-body">
+      
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control shadow-sm" required>
+      </div>  
+  
+        <div class="mb-3">
+          <label class="form-label">Phone</label>
+          <input type="tel" name="phone" class="form-control shadow-sm" required>
+          
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control shadow-sm" required>
+            
+          </div>
+        
+        <div class="mb-3">
+          <label class="form-label">Designation</label>
+          <input type="text" name="designation" class="form-control shadow-sm" required>
+        </div>
+        
+        
+        
+    
+    </div>
+    
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default btn-sm shadow-none" data-bs-dismiss="modal">Close</button>
+      <button style="width: 130px;" type="submit" id="loading" class="btn btn-primary btn-sm shadow-none"><i class="fa-solid fa-plus"></i> Create</button>
+    </div>
+  </form>
